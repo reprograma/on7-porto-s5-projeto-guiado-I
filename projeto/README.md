@@ -36,7 +36,7 @@
 
    É importante aqui você conferir se o repositório base é o da reprograma, na branch com seu nome. Vai ficar algo assim no cabeçalho do PR:
 
-   `base repository: reprograma/on6-xp-s3-logica-js base: nome-sobrenome(sua branch) <------ head repository: SeuRepo/on6-xp-s3-logica-js compare: nome-sobrenome(sua branch)`
+   `base repository: reprograma/on7-porto-s5-projeto-guiado-I base: nome-sobrenome(sua branch) <------ head repository: SeuRepo/on7-porto-s5-projeto-guiado-I compare: nome-sobrenome(sua branch)`
 
    > Nota: é importante garantir isso pra que seu código vá para uma branch separada e não entre em conflito com os códigos das suas colegas
 
