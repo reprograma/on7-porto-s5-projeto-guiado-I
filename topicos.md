@@ -1,12 +1,12 @@
 # Tópicos para aula
 
-1. Funções
-2. Scopes
-3. Arrow functions
-4. Loops e condicionais
-5. Filter
-6. Map
-7. Reduce
+1. Funções (ok)
+2. Scopes (ok)
+3. Arrow functions (ok)
+4. Loops e condicionais (ok)
+5. Filter (ok)
+6. Map (ok)
+7. Reduce (ok)
 
 # O que vamos fazer?
 

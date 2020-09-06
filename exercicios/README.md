@@ -10,3 +10,4 @@ Você irá executar todos os arquivos com os exercícios no console. Nos exercí
 6. Some o total dos valores de itens de uma lista de mercado. Bônus: arredonde o valor para até 2 casas decimais!
 7. Some somente os valores ímpares de uma lista
 8. Filtre uma lista de nomes e retorne somente os que começam com a letra 'A'
+9. Desafio surpresa (:
