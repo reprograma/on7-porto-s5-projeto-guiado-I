@@ -25,3 +25,10 @@ const listaDeMercado = [
     valor: 6.99
   }
 ]
+ const valores = listaDeMercado.map(listaDeMercado => listaDeMercado.valor)
+ console.log(valores)
+
+ const reducer =(accumulator, currentValue) => accumulator + currentValue
+ const valorFinal = valores.reduce(reducer).toFixed(2)
+
+ console.log(valorFinal)
