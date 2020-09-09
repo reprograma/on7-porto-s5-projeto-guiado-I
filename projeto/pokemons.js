@@ -8,13 +8,24 @@ const rl = readline.createInterface({
 console.table(db.pokemons)
 
 rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n 2. Treinar \n', function(instrucao) {
-  if (instrucao == 'registrar') {
+  if (instrucao == 'Registrar' || instrucao == 'registrar' || instrucao == 1) {
     rl.question('Qual o nome do pokemon? \n', function(nomePokemon) {
       rl.question('Qual o nível do pokemon? \n', function(nivelPokemon) {
         rl.question('Qual o tipo do pokemon? \n', function(tipoPokemon) {
-          console.log('Nome:', nomePokemon, 'Nível:', nivelPokemon, 'Tipo:', tipoPokemon)
+          //console.log('Nome:', nomePokemon, 'Nível:', nivelPokemon, 'Tipo:', tipoPokemon)
           // Você pode remover esse console.log acima se quiser.
-          // Chame AQUI a função que irá receber os valores e registrar o pokemon.
+          function registrarPokemons (nome,nivel,tipo){
+            const pokemon = {
+              id: db.pokemons.length + 1,
+              nome: nome,
+              nivel: parseInt(nivel),
+              tipo: tipo.split(',')           
+            }
+             const novoPokemon = db.pokemons.push(pokemon)
+        
+          }
+            registrarPokemons(nomePokemon,nivelPokemon,tipoPokemon)
+            console.table(db.pokemons)
           rl.close()
         });
       });
