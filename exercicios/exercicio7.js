@@ -5,7 +5,7 @@ let numerosImpares = valores.filter((numero) =>{
 })
 console.log (numerosImpares)
 
-//const reducer = (acc, curretValue) => acc + curretValue
+const reducer = (acc, curretValue) => acc + curretValue
 
-//console.log (numerosImpares.reduce(reducer))
+console.log (numerosImpares.reduce(reducer))
 
