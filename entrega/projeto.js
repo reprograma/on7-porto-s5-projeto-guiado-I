@@ -20,7 +20,7 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
                   id: db.pokemons.length +1,
                   nome,
                   nivel: parseInt(nivel),
-                  tipo
+                  tipo: tipo.split()
                 }
                   const newPokemons = (db.pokemons)
                   newPokemons.push (recebePokemon)
