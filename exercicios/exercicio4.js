@@ -20,3 +20,8 @@ const listaDeMercado = [
     comprado: false
   }
 ]
+
+const comprado = listaDeMercado.filter((item) => {
+  return item.comprado == false
+})
+console.log(comprado)
