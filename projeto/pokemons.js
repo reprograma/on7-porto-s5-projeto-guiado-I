@@ -7,21 +7,35 @@ const rl = readline.createInterface({
 
 console.table(db.pokemons)
 
-rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n 2. Treinar \n', function(instrucao) {
-  if (instrucao == 'registrar') {
-    rl.question('Qual o nome do pokemon? \n', function(nomePokemon) {
-      rl.question('Qual o nível do pokemon? \n', function(nivelPokemon) {
-        rl.question('Qual o tipo do pokemon? \n', function(tipoPokemon) {
+rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n 2. Treinar \n', function (instrucao) {
+  if (instrucao.toLowerCase() == 'registrar' || instrucao == '1') { // tolowerCase - converte texto p minusculo
+    rl.question('Qual o nome do pokemon? \n', function (nomePokemon) {
+      rl.question('Qual o nível do pokemon? \n', function (nivelPokemon) {
+        rl.question('Qual o tipo do pokemon? \n', function (tipoPokemon) {
           console.log('Nome:', nomePokemon, 'Nível:', nivelPokemon, 'Tipo:', tipoPokemon)
           // Você pode remover esse console.log acima se quiser.
           // Chame AQUI a função que irá receber os valores e registrar o pokemon.
+
+          // Função é mais utilizada quando for para organização ou reutilizar o código
+          // Aqui na atv usei a função table já utilizada pela prof
+
+          const pokemon =
+          {
+            id: db.pokemons.length + 1,
+            nome: nomePokemon,
+            nivel: parseInt(nivelPokemon),
+            tipo: tipoPokemon.split(',')  // Split serve para dividir um string por um caractere
+          }
+          db.pokemons.push(pokemon)
+          console.table(db.pokemons) // chamar a função que a prof ja criou. 
+
           rl.close()
         });
       });
     });
   } else {
-    rl.question('Qual o ID do pokemon? \n', function(idPokemon) {
-      rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon) {
+    rl.question('Qual o ID do pokemon? \n', function (idPokemon) {
+      rl.question('Quantos níveis quer adicionar? \n', function (niveisPokemon) {
         console.log('ID:', idPokemon, 'Níveis:', niveisPokemon)
         // Você pode remover esse console.log acima se quiser.
         // Chame AQUI a função que irá receber os valores e treinar o pokemon.
@@ -29,5 +43,5 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
       });
     });
   }
-  console.log(instrucao)
+ // console.log(instrucao)
 });
