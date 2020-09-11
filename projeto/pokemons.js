@@ -32,14 +32,14 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
     rl.question('Qual o ID do pokemon? \n', function(idPokemon) {
       rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon) {
         console.log(`O pokemon ${db.pokemons[idPokemon-1].nome} foi treinado com sucesso!`)
-          const newLevel = (niveisPokemon) => {
+          const newLevel = () => {
             if (db.pokemons[idPokemon-1].nivel + parseInt(niveisPokemon) <= 100) {
               return db.pokemons[idPokemon-1].nivel + parseInt(niveisPokemon)
             } else {
               return 100
             }
           }
-          db.pokemons[idPokemon-1].nivel = newLevel(niveisPokemon)
+          db.pokemons[(idPokemon)-1].nivel = newLevel()
           console.table(db.pokemons)
         rl.close()
       });
