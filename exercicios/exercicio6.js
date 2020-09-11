@@ -1,27 +1,36 @@
+// Some o total dos valores de itens de uma lista de mercado. 
+// Bônus: arredonde o valor para até 2 casas decimais!
+
 const listaDeMercado = [
   {
     nome: 'Maçã',
     comprado: true,
-    valor: 4.64
+    valor1: 4.64
   },
   {
     nome: 'Chamyto',
     comprado: false,
-    valor: 6.99
+    valor2: 6.99
   },
   {
     nome: 'Nutella',
     comprado: false,
-    valor: 23.90
+    valor3: 23.90
   },
   {
     nome: 'Sorvete',
     comprado: true,
-    valor: 12.99
+    valor4: 12.99
   },
   {
     nome: 'Suco',
     comprado: false,
-    valor: 6.99
+    valor5: 6.99
   }
 ]
+
+let total = listaDeMercado.reduce(sumAll, 0);
+function sumAll (total, item){
+  return total + item.valor
+}
+console.log(`Valor total: ${total.toFixed(2)}`)
