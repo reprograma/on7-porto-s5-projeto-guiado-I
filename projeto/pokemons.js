@@ -1,5 +1,7 @@
 const db = require('./database')
 const readline = require('readline');
+const { pokemons } = require('./database');
+const { generateKeyPair } = require('crypto');
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
@@ -8,14 +10,37 @@ const rl = readline.createInterface({
 console.table(db.pokemons)
 
 rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n 2. Treinar \n', function(instrucao) {
-  if (instrucao == 'registrar') {
+  if (instrucao == 'Registrar' || instrucao == 'registrar' || instrucao == 1) {
     rl.question('Qual o nome do pokemon? \n', function(nomePokemon) {
       rl.question('Qual o nível do pokemon? \n', function(nivelPokemon) {
         rl.question('Qual o tipo do pokemon? \n', function(tipoPokemon) {
           console.log('Nome:', nomePokemon, 'Nível:', nivelPokemon, 'Tipo:', tipoPokemon)
           // Você pode remover esse console.log acima se quiser.
           // Chame AQUI a função que irá receber os valores e registrar o pokemon.
-          rl.close()
+
+          function registrar(nomePokemon, nivelPokemon, tipoPokemon){
+            const pokemon = {
+              id: parseInt(db.pokemons.length + 1),
+              nome: nomePokemon,
+              nivel: parseInt(nivelPokemon),
+              tipo: [tipoPokemon]
+            }
+              return pokemon
+              }
+              
+          db.pokemons.push(registrar(nomePokemon, nivelPokemon, tipoPokemon))
+          console.table(db.pokemons)
+
+          /*for(i = 0 ; i < db.pokemons ; i++){
+            if (db.pokemons.nome[i] !== pokemon.nome[i]){
+              db.pokemons.push(pokemon)
+              
+            }
+            return db.pokemons
+          }*/
+          
+                   
+          rl.close() 
         });
       });
     });
@@ -25,9 +50,24 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
         console.log('ID:', idPokemon, 'Níveis:', niveisPokemon)
         // Você pode remover esse console.log acima se quiser.
         // Chame AQUI a função que irá receber os valores e treinar o pokemon.
+        function treinarPokemon(idPokemon, niveisPokemon){
+          for(i=0; i<db.pokemons.length;i++){
+            if(idPokemon !== db.pokemons.id){
+              return` Pokemon nao registrado!`
+            }else if(idPokemon === db.pokemons.id){
+              return `Adicionar nivel`
+            }
+           return `Add nivel` 
+          }
+           
+          }
+           console.log(treinarPokemon(idPokemon, niveisPokemon))
+           console.table(db.pokemons)
+
+
         rl.close()
       });
     });
   }
-  console.log(instrucao)
+ // console.log(instrucao)
 });
