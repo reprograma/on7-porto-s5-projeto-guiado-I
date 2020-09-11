@@ -21,7 +21,5 @@ const listaDeMercado = [
   }
 ]
 
-const comprado = listaDeMercado.filter((item) => {
-  return item.comprado == false
-})
+const comprado = listaDeMercado.filter((item) => {return !item.comprado})
 console.log(comprado)
