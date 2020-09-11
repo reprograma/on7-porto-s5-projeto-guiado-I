@@ -29,12 +29,16 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
         });
       });
     });
-  } else {
+  } else if (instrucao == 'Treinar' || instrucao == 'treinar' || instrucao == 2) {
     rl.question('Qual o ID do pokemon? \n', function(idPokemon) {
       rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon) {
-        console.log('ID:', idPokemon, 'Níveis:', niveisPokemon)
-        // Você pode remover esse console.log acima se quiser.
-        // Chame AQUI a função que irá receber os valores e treinar o pokemon.
+        function treinarPokemon(id, niveis) {
+          const novoNivel = db.pokemons[id - 1].nivel + parseInt(niveis)
+          db.pokemons[id - 1].nivel = novoNivel
+          console.table(db.pokemons)
+        }
+        treinarPokemon(idPokemon, niveisPokemon)
+        
         rl.close()
       });
     });
