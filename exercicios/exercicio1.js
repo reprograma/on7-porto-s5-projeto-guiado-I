@@ -6,17 +6,16 @@ for (let i = 0; i <= 10; i++){
         console.log(i)
     }
 }
-
 zeroADez()
+
 
 // Arrow Function
+// const zeroADez = () => { for (i = 0; i <= 10; i++) {
+//     console.log(i)
+//     }
+// }
 
-const zeroADez = () => { for (let i = 0; i <= 10; i++) {
-    console.log(i)
-    }
-}
-
-zeroADez()
+// zeroADez()
 
 
 
