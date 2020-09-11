@@ -33,6 +33,7 @@ console.table(db.pokemons)
       });
     });
   } else if (instruction == 'Treinar') {
+    
     rl.question('Qual o ID do pokemon? \n', function(idPokemon) {
       rl.question('Quantos níveis quer adicionar? \n', function(levelUpPokemon) {
         console.log('ID:', idPokemon, 'Níveis:', levelUpPokemon)
@@ -42,12 +43,13 @@ console.table(db.pokemons)
           let pokemonTreinado = {
               id: parseInt(pokeId),
               nome: pokeName,
-              nivel: parseInt(pokeLevel),
+              nivel: pokeLevel,
               tipo: pokeType
               }
       return pokemonTreinado
 }
-db.pokemons[parseInt(idPokemon) - 1] = treinaPoke(parseInt(idPokemon), "TESTE-NOME", levelUpPokemon, "TESTE-TIPO")
+
+db.pokemons[parseInt(idPokemon)-1] = treinaPoke (idPokemon, db.pokemons[idPokemon-1].nome, parseInt(db.pokemons[idPokemon-1].nivel) + parseInt(levelUpPokemon), db.pokemons[idPokemon-1].tipo)
 console.table(db.pokemons)
        
         rl.close()
