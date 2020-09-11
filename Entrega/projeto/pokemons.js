@@ -26,22 +26,30 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
           console.table(db.pokemons)     
 
           rl.close()
-        });
-      });
-    });
+        }); // fecha tipo pokemon
+      }); // fecha nivel pokemon
+    }); // fecha nome pokemon
   } else if (instrucao == 'Treinar' || instrucao == 'treinar' || instrucao == 2) {
     rl.question('Qual o ID do pokemon? \n', function(idPokemon) {
       rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon) {
         function treinarPokemon(id, niveis) {
           const novoNivel = db.pokemons[id - 1].nivel + parseInt(niveis)
-          db.pokemons[id - 1].nivel = novoNivel
+          if (novoNivel > 100) {
+            db.pokemons[id - 1].nivel = 100
+          } else {
+            db.pokemons[id - 1].nivel = novoNivel
+          }          
           console.table(db.pokemons)
         }
         treinarPokemon(idPokemon, niveisPokemon)
-        
         rl.close()
-      });
-    });
-  }
+
+      }) // fecha pergunta niveis
+    }) // fecha pergunta id
+
+      
+
+
+  } // fecha else if
   
-});
+}); // fecha primeiro question
