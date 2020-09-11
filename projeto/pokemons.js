@@ -8,18 +8,29 @@ const rl = readline.createInterface({
 console.table(db.pokemons)
 
 rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n 2. Treinar \n', function(instrucao) {
-  if (instrucao == 'registrar') {
+  if (instrucao == 'Registrar' || instrucao == 'registrar' || instrucao == 'REGISTRAR') {
     rl.question('Qual o nome do pokemon? \n', function(nomePokemon) {
       rl.question('Qual o nível do pokemon? \n', function(nivelPokemon) {
         rl.question('Qual o tipo do pokemon? \n', function(tipoPokemon) {
-          console.log('Nome:', nomePokemon, 'Nível:', nivelPokemon, 'Tipo:', tipoPokemon)
+          console.log(`Sua Pokedex contém os Pokemons abaixo:`)
           // Você pode remover esse console.log acima se quiser.
           // Chame AQUI a função que irá receber os valores e registrar o pokemon.
+          const registerPokemon = (nomePokemon, nivelPokemon, tipoPokemon) => {
+            const newPokemon = {
+              id: db.pokemons.length + 1,
+              nome: nomePokemon,
+              nivel: parseInt(nivelPokemon),
+              tipo: tipoPokemon.split(',')
+            }
+            return newPokemon
+          }
+          db.pokemons.push(registerPokemon(nomePokemon, nivelPokemon, tipoPokemon))
+          console.table(db.pokemons)
           rl.close()
         });
       });
     });
-  } else {
+  } else if (instrucao == 'Treinar' || instrucao == 'treinar' || instrucao == 'TREINAR') {
     rl.question('Qual o ID do pokemon? \n', function(idPokemon) {
       rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon) {
         console.log('ID:', idPokemon, 'Níveis:', niveisPokemon)
@@ -28,6 +39,8 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
         rl.close()
       });
     });
+  } else {
+    console.log('Desculpe, não entendi o seu comando. Por favor, reiniciar a sua Pokedex.')
   }
-  console.log(instrucao)
+//console.log(instrucao)
 });
