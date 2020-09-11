@@ -35,4 +35,3 @@ function sumAll (total, item){
 }
 console.log(`Valor total: ${total.toFixed(2)}`)
 
-https://medium.com/@luizalbertobm/somar-valores-em-uma-lista-de-objetos-javascript-usando-reduce-faf39aa2618e
