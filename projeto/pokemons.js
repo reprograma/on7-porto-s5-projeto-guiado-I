@@ -7,27 +7,51 @@ const rl = readline.createInterface({
 
 console.table(db.pokemons)
 
-rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n 2. Treinar \n', function(instrucao) {
-  if (instrucao == 'registrar') {
-    rl.question('Qual o nome do pokemon? \n', function(nomePokemon) {
-      rl.question('Qual o nível do pokemon? \n', function(nivelPokemon) {
-        rl.question('Qual o tipo do pokemon? \n', function(tipoPokemon) {
-          console.log('Nome:', nomePokemon, 'Nível:', nivelPokemon, 'Tipo:', tipoPokemon)
-          // Você pode remover esse console.log acima se quiser.
-          // Chame AQUI a função que irá receber os valores e registrar o pokemon.
-          rl.close()
+rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n 2. Treinar \n', (instruction) => {
+    if (instruction == 'registrar') {
+      rl.question('Qual o nome do pokemon? \n', (namePokemon) => {
+          rl.question('Qual o nível do pokemon? \n', (levelPokemon) => {
+              rl.question('Qual o tipo do pokemon? \n', (typePokemon) => {
+                  
+                // ================ FUNÇÃO REGISTRA POKEMON ================== //
+                  var newId = db.pokemons.length + 1;
+
+                  if (Number(levelPokemon) > 100 ?  levelPokemon = 100 : levelPokemon)
+
+                  db.pokemons.push(
+                    {
+                      id: newId,
+                      nome: namePokemon,
+                      nivel: Number(levelPokemon),
+                      tipo: [typePokemon]
+                    });
+                  console.log(`\nPokemon ${namePokemon} adicionado a sua Pokedex!`)           
+                  console.table(db.pokemons);
+                  
+                // ============================================================ //
+                  rl.close();
+                });
+            });
         });
-      });
-    });
-  } else {
-    rl.question('Qual o ID do pokemon? \n', function(idPokemon) {
-      rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon) {
-        console.log('ID:', idPokemon, 'Níveis:', niveisPokemon)
-        // Você pode remover esse console.log acima se quiser.
-        // Chame AQUI a função que irá receber os valores e treinar o pokemon.
-        rl.close()
-      });
-    });
-  }
-  console.log(instrucao)
-});
+    } else if (instruction == 'treinar') {
+      rl.question('Qual o ID do pokemon? \n', (idPokemon) => {
+          rl.question('Quantos níveis quer adicionar? \n', (levelsPokemon) => {
+              // ================ FUNÇÃO TREINA POKEMON ================== //
+              
+              db.pokemons.filter((pokemom) => {
+                  if (Number(idPokemon) === pokemom.id) {
+                    if (pokemom.nivel + Number(levelsPokemon) > 100 ? pokemom.nivel = 100 : pokemom.nivel += Number(levelsPokemon));
+                    console.log(`\n${pokemom.nome} treinado! subiu para o nível ${pokemom.nivel} `)           
+                  }
+                });
+              console.table(db.pokemons);
+                            
+              // ================================== //
+              rl.close();
+            });
+        });
+    } else {
+      throw new Error( `Opção inválida! Escolha registrar ou treinar`);
+    }
+    console.log(instruction);
+  });
