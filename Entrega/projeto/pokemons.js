@@ -33,8 +33,7 @@ let menu = () => {
     } else if (instrucao == 'Treinar' || instrucao == 'treinar' || instrucao == 2) {
       let question = () => {
         rl.question('Qual o ID do pokemon? \n', function(idPokemon) {
-          const idDigitado = db.pokemons.find(pokemon => pokemon.id == idPokemon);
-          if (!idDigitado) {
+          if (!db.pokemons[idPokemon - 1]) {
             console.log('Pokemon não encontrado. Tente novamente.')
             question();
           }
