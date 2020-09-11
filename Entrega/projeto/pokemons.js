@@ -45,11 +45,14 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
         rl.close()
 
       }) // fecha pergunta niveis
-    }) // fecha pergunta id
-
-      
+    }) // fecha pergunta id      
 
 
-  } // fecha else if
+  } else {
+    console.log('Instrução inválida. Escolha Registrar ou Treinar')
+    rl.close()
+    
+
+  } // fecha else
   
 }); // fecha primeiro question
