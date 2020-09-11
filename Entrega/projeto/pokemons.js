@@ -8,8 +8,8 @@ const rl = readline.createInterface({
 console.table(db.pokemons)
 
 rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n 2. Treinar \n', function(instrucao) {
-  if (instrucao == 'Registrar' ||instrucao == 'registrar' || instrucao == 1) {
-    rl.question('Qual o nome do pokemon? \n', function(nomePokemon) {
+  if (instrucao == 'Registrar' || instrucao == 'registrar' || instrucao == 1) {
+    rl.question('Qual o nome do pokemon? \n', (nomePokemon) => {
       rl.question('Qual o nível do pokemon? \n', function(nivelPokemon) {
         rl.question('Qual o tipo do pokemon? \n', function(tipoPokemon) {
 
@@ -22,37 +22,39 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
             }
             return db.pokemons.push(pokemon)
           }
+
           registrarPokemon(nomePokemon, nivelPokemon, tipoPokemon)
-          console.table(db.pokemons)     
-
-          rl.close()
-        }); // fecha tipo pokemon
-      }); // fecha nivel pokemon
-    }); // fecha nome pokemon
-  } else if (instrucao == 'Treinar' || instrucao == 'treinar' || instrucao == 2) {
-    rl.question('Qual o ID do pokemon? \n', function(idPokemon) {
-      rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon) {
-        function treinarPokemon(id, niveis) {
-          const novoNivel = db.pokemons[id - 1].nivel + parseInt(niveis)
-          if (novoNivel > 100) {
-            db.pokemons[id - 1].nivel = 100
-          } else {
-            db.pokemons[id - 1].nivel = novoNivel
-          }          
           console.table(db.pokemons)
+          rl.close()
+        })
+      })
+    }) 
+  } else if (instrucao == 'Treinar' || instrucao == 'treinar' || instrucao == 2) {
+    let question = () => {
+      rl.question('Qual o ID do pokemon? \n', function(idPokemon) {
+        const idDigitado = db.pokemons.find(pokemon => pokemon.id == idPokemon);
+        if (!idDigitado) {
+          console.log('Pokemon não encontrado. Tente novamente.')
+          question();
         }
-        treinarPokemon(idPokemon, niveisPokemon)
-        rl.close()
-
-      }) // fecha pergunta niveis
-    }) // fecha pergunta id      
-
-
+        rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon) {
+          function treinarPokemon(id, niveis) {
+            const novoNivel = db.pokemons[id - 1].nivel + parseInt(niveis)
+            if (novoNivel > 100) {
+              db.pokemons[id - 1].nivel = 100
+            } else {
+              db.pokemons[id - 1].nivel = novoNivel
+            }          
+            console.table(db.pokemons)
+          }
+          treinarPokemon(idPokemon, niveisPokemon)
+          rl.close()        
+      })
+    }) 
+  }
+  question()      
   } else {
     console.log('Instrução inválida. Escolha Registrar ou Treinar')
     rl.close()
-    
-
-  } // fecha else
-  
-}); // fecha primeiro question
+  } 
+})
