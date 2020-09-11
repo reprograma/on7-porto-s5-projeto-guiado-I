@@ -30,16 +30,8 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
               
           db.pokemons.push(registrar(nomePokemon, nivelPokemon, tipoPokemon))
           console.table(db.pokemons)
-
-          /*for(i = 0 ; i < db.pokemons ; i++){
-            if (db.pokemons.nome[i] !== pokemon.nome[i]){
-              db.pokemons.push(pokemon)
               
-            }
-            return db.pokemons
-          }*/
-          
-                   
+                  
           rl.close() 
         });
       });
@@ -57,7 +49,7 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
             }else if(idPokemon === db.pokemons.id){
               return `Adicionar nivel`
             }
-           return `Add nivel` 
+           
           }
            
           }
@@ -69,5 +61,5 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
       });
     });
   }
- // console.log(instrucao)
+  console.log(instrucao)
 });
