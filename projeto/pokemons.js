@@ -1,5 +1,6 @@
 const db = require('./database')
 const readline = require('readline');
+const { pokemons } = require('./database');
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
@@ -32,11 +33,26 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
     });
   } else {
     rl.question('Qual o ID do pokemon? \n', function(idPokemon) {
-      rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon) {
+      rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon){
         console.log('ID:', idPokemon, 'Níveis:', niveisPokemon)
         // Você pode remover esse console.log acima se quiser.
-        // Chame AQUI a função que irá receber os valores e treinar o pokemon.
+        function treinarPokemon(id,nivel){
+          for(i=0; i<db.pokemons.length;i++){
+            if(id === db.pokemons.length[i]){ 
+              return `Quantos niveis quer adicionar?` 
+            } else {
+              return `Pokemon não encontrado. Informe um ID Valido!`
+            }
+              
+
+            }
+            
+          }
+          console.log(treinarPokemon(idPokemon))
+          
+         
         rl.close()
+  
       });
     });
   }
