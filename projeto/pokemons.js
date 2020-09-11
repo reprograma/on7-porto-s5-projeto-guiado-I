@@ -22,10 +22,14 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
               nome,
               nivel: parseInt(nivel), 
               tipo: tipo.split
-                      
-             pokemonregister(nomePokemon, nivelPokemon, tipoPokemon) 
-          
-            }
+             }         
+             const newpokemons = (db.pokemons)
+                   newpokemons.push(recebepokemon)
+                   
+                   console.table(newpokemons)
+                       }
+            pokemonregister(nomePokemon, nivelPokemon, tipoPokemon)
+            
           rl.close()
         });
       });
