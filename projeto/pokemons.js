@@ -15,6 +15,17 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
           console.log('Nome:', nomePokemon, 'Nível:', nivelPokemon, 'Tipo:', tipoPokemon)
           // Você pode remover esse console.log acima se quiser.
           // Chame AQUI a função que irá receber os valores e registrar o pokemon.
+          
+          function pokemonregister(nome, nivel, tipo) {
+            const recebepokemon = {
+              id: db.pokemons.length +1,
+              nome,
+              nivel: parseInt(nivel), 
+              tipo: tipo.split
+                      
+             pokemonregister(nomePokemon, nivelPokemon, tipoPokemon) 
+          
+            }
           rl.close()
         });
       });
