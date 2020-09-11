@@ -1,7 +1,9 @@
-const confeito = [">(O)<"];
+
+const confeito = ['>(O)<'];
 const pessoa = {
-  nome: "Anna",
+  nome: 'Carlos',
   comer(confeito) {
-    console.log(`${this.nome} comeu a confeito: ${confeito}`);
-  },
-};
+    console.log(`${this.nome} comeu o confeito: ${praSuavariavel}`);
+  }
+}
+
