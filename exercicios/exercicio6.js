@@ -44,13 +44,14 @@ function somarValoresItensListaDeMercado (){
 }
 
 }
-console.log(somarValoresItensListaDeMercado(listaDeMercado)) // 4.64 
+console.log(somarValoresItensListaDeMercado(listaDeMercado), "teste") // 4.64 
  
 
 console.log(listaDeMercado) 
 
-/*  Exibe Lista original 
+/*  Exibe após execução do código 
 
+4.64 teste
 [
   { nome: 'Maçã', comprado: true, valor: 4.64 },
   { nome: 'Chamyto', comprado: false, valor: 6.99 },

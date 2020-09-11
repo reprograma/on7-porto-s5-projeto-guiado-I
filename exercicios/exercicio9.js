@@ -8,7 +8,7 @@ const pessoa = {
     console.log(`${this.nome} comeu a bala: ${bala}`);
   }
 }
-
+ 
 // 9. Desafio surpresa (:
 
 function imprimeNaTela(){

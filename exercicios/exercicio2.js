@@ -17,7 +17,7 @@ for ( i = 1; i <= numero2; i++ ){
 console.log(tabuada (numero1,numero2))
 
 
-/* Exibe no terminal após execução do código 
+/* Exibe após execução do código 
 
 6 X 1  =  6
 6 X 2  =  12

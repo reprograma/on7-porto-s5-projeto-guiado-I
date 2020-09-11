@@ -50,7 +50,7 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
               nivel: parseInt(niveis) ,
             }  
             return pokemon2
-
+   
             } else {
               console.log("Pokemon não encontrado.")
             }

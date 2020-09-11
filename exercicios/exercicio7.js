@@ -39,13 +39,13 @@ let soma4 = 0
  console.log(soma4, "TESTE-4")
 
  
- /* Exibe na tela do terminal    
+ /* Exibe após execução do código 
  
-A soma dos valores ímpares é:   NaN TESTE-3
 271 TESTE-1 - RETORNA SOMA DE TODOS OS ELEMEMTOS ARRAY
 0 TESTE-2
 NaN TESTE-3
 _________________________________
+---------------------------------
 20 TESTE-4
 
  */

@@ -11,7 +11,7 @@ for (i = 0; i < nomes.length; i++){
 
 
 
-/*  Exibe na tela 
+/*  Exibe após execução do código
 
 Anna    
 Andressa

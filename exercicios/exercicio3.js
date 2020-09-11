@@ -12,7 +12,7 @@ function lista(){
 
 console.log(lista(listaDeMercado))
 
-
+  
 /* Exibe após execução do código
 
 [
