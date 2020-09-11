@@ -1,14 +1,27 @@
 const nomes = ['Anna', 'Andressa', 'Luciana', 'Bruna', 'Amanda'];
 
-let nomesIniciadosA = [];
-let novoIndice = 0;
+// let nomesIniciadosA = [];
+// let novoIndice = 0;
 
-function nameA(nome, indice){
-    if (nomes[indice].indexOf("A") == 0){
-        nomesIniciadosA[novoIndice] = nomes[indice];
-        novoIndice++;
+// function nameA(nome, indice){
+//     if (nomes[indice].indexOf("A") == 0){
+//         nomesIniciadosA[novoIndice] = nomes[indice];
+//         novoIndice++;
+//     }
+// }
+
+// nomes.forEach(nameA);
+// console.log(nomesIniciadosA)
+
+
+
+
+let newListA = []
+  
+  for (let i = 0; i < nomes.length; i++) {
+    if (nomes[i].charAt(0) == "A" ) {
+      newListA.push(nomes[i])
     }
-}
-
-nomes.forEach(nameA);
-console.log(nomesIniciadosA)
+  } 
+  
+  console.log(newListA)

@@ -35,3 +35,6 @@ function sumAll (total, item){
 }
 console.log(`Valor total: ${total.toFixed(2)}`)
 
+
+
+

@@ -16,4 +16,4 @@ function list() {
      return listaDeMercado
  }
 }
-// console.log(list())
+ console.log(list())
