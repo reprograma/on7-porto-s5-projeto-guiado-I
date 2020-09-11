@@ -19,13 +19,13 @@ const listaDeMercado = [
     nome: 'Suco',
     comprado: false
   }
-]
+]    
 
 // 4. Filtre os itens já comprados de uma lista de mercado e retorne a lista atualizada
 
-// exercicio4.js  [wip] // roda retornando todos os objetos, mas não entra na condição
+// exercicio4.js  [wip] // retorna todos os objetos, mas não entra na condição
 
-let novoArray = []
+let novoArray = 0
 
 function filtrarItensComprados (){
   

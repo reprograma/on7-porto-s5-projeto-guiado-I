@@ -7,7 +7,7 @@ for (let i = 0; i <= 10; i++){
     console.log(i)
 }
 
-
+    
 /* Exibe no terminal após execução do código
 
 

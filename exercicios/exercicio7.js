@@ -9,7 +9,7 @@ function somaValoresImpares(){
      for (i = 0 ; i < valores.length; i++){
         soma += valores[i]
         
-     } if (valores % 2 === 0){
+     } if (valores[i] % 2 === 0){
          soma2 += valores[i]
         return `A soma dos valores pares é: ${soma2}  TESTE-2`
 
@@ -23,11 +23,12 @@ function somaValoresImpares(){
  
    console.log(somaValoresImpares(valores))
 
-   console.log(soma, "TESTE-1 - RETORNA SOMA DE TODOS OS ELEMEMTOS ARRAY")
+   console.log(soma,  "TESTE-1 - RETORNA SOMA DE TODOS OS ELEMEMTOS ARRAY")
    console.log(soma2, "TESTE-2")
    console.log(soma3, "TESTE-3")
 
 console.log("_________________________________")
+console.log("---------------------------------")
 
 const valor = [2, 3, 5, 10]
 let soma4 = 0
@@ -38,7 +39,7 @@ let soma4 = 0
  console.log(soma4, "TESTE-4")
 
  
- /* Exibe na tela do terminal
+ /* Exibe na tela do terminal    
  
 A soma dos valores ímpares é:   NaN TESTE-3
 271 TESTE-1 - RETORNA SOMA DE TODOS OS ELEMEMTOS ARRAY

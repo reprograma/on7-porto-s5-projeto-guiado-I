@@ -11,7 +11,7 @@ for ( i = 1; i <= numero2; i++ ){
 
     console.log (numero1 , "X" , i ,  " = "  , (numero1 * i ))
 
-}
+}   
 }
 
 console.log(tabuada (numero1,numero2))

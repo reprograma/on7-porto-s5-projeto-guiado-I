@@ -13,7 +13,7 @@ function lista(){
 console.log(lista(listaDeMercado))
 
 
-/* Exibe no terminal  após execução do código
+/* Exibe após execução do código
 
 [
   'maçã',

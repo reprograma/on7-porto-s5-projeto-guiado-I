@@ -44,7 +44,7 @@ module.exports = {
     },
     {
       id: 8,
-      nome: 'Mewtwo',
+      nome: 'Mewtwo', 
       nivel: 80,
       tipo: ['psiquico'],
     },

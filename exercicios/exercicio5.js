@@ -12,6 +12,6 @@ function somarNotas (){
 
     return `O resultado da soma das notas foi :  ${soma}`
     
-}
+}   
 console.log(somarNotas())
 
