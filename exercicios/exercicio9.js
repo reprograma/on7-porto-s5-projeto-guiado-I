@@ -1,9 +1,9 @@
 const bala = ['[<O>]'];
 bala[0]= '0'
 const pessoa = {
-  nome: 'Anna',
-  comer(bala) {
-    console.log(`${this.nome} comeu a bala: ${bala}`);
+  nome: 'Carlos',
+  comer(confeito) {
+    console.log(`${this.nome} comeu o confeito: ${praSuavariavel}`);
   }
 }
 pessoa.comer(bala)
