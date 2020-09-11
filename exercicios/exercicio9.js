@@ -1,4 +1,4 @@
-const bala = ['[<O>]'];
+const bala = ['>(0)<'];
 const pessoa = {
   nome: 'Anna',
   comer(bala) {
