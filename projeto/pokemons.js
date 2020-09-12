@@ -9,7 +9,7 @@ console.table(db.pokemons);
 
 function menu() {
 
-	rl.question('Bem-vindo ao Pokedex! O que você gostaria de fazer com seus Pokemons? \n 1. Registrar \n 2. Treinar \n 3. Sair \n', instrucao => {
+	rl.question('Olá, seja Bem-vindo ao Pokedex! O que você gostaria de fazer com seus Pokemons? \n 1. Registrar \n 2. Treinar \n 3. Sair \n', instrucao => {
 			if (instrucao == 'Registrar' || instrucao == 'registrar' || instrucao == 1) {
 				rl.question('\n Qual o nome do pokemon? \n', (nomePokemon) => {
 					rl.question('\n Qual o nível do pokemon? \n', (nivelPokemon) => {
@@ -86,7 +86,7 @@ menu();
 │    6    │ 7  │  'Snorlax'   │  70   │      [ 'normal' ]      │
 │    7    │ 8  │   'Mewtwo'   │  80   │     [ 'psiquico' ]     │
 └─────────┴────┴──────────────┴───────┴────────────────────────┘
-Bem-vindo ao Pokedex! O que você gostaria de fazer com seus Pokemons?
+Olá, seja Bem-vindo ao Pokedex! O que você gostaria de fazer com seus Pokemons?
  1. Registrar
  2. Treinar
  3. Sair
