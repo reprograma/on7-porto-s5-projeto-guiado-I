@@ -8,7 +8,7 @@ const rl = readline.createInterface({
 console.table(db.pokemons)
 
 let menu = () => {
-  rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n 2. Treinar \n', function(instrucao) {
+  rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n 2. Treinar \n 3. Sair da Pokedex \n', function(instrucao) {
     if (instrucao == 'Registrar' || instrucao == 'registrar' || instrucao == 1) {
       rl.question('\n Qual o nome do pokemon? \n', (nomePokemon) => {
         rl.question('\n Qual o nível do pokemon? \n', function(nivelPokemon) {
@@ -36,7 +36,7 @@ let menu = () => {
         rl.question('Qual o ID do pokemon? \n', function(idPokemon) {
           if (!db.pokemons[idPokemon - 1]) {
             console.log('Pokemon não encontrado. Tente novamente.')
-            question();
+            question()
           }
           rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon) {
             function treinarPokemon(id, niveis) {
@@ -57,7 +57,12 @@ let menu = () => {
         })
       }) 
     }
-    question()      
+    question()
+    } else if (instrucao == 'Sair' || instrucao == 'sair' || instrucao == 3) {
+      console.log('Até mais!')
+      rl.close()
+
+    
     } else {
       console.log('\n Instrução inválida. Escolha Registrar ou Treinar. \n')
       menu()
