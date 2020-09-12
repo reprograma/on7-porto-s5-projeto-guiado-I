@@ -39,23 +39,24 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
   } else {
     rl.question('Qual o ID do pokemon? \n', function(idPokemon) {
       rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon) {
-        console.log('ID:', idPokemon, 'Níveis:', niveisPokemon)
-        // Você pode remover esse console.log acima se quiser.
-        // Chame AQUI a função que irá receber os valores e treinar o pokemon.
-        function treinarPokemon(idPokemon, niveisPokemon){
-          for(i=0; i<db.pokemons.length;i++){
-            if(idPokemon !== db.pokemons.id){
-              return` Pokemon nao registrado!`
-            }else if(idPokemon === db.pokemons.id){
-              return `Adicionar nivel`
-            }
-           
-          }
-           
-          }
-           console.log(treinarPokemon(idPokemon, niveisPokemon))
-           console.table(db.pokemons)
 
+        function treinarPokemon(idPokemon, niveisPokemon){
+                
+          const nova = db.pokemons[idPokemon-1].nivel  + parseInt(niveisPokemon)
+         
+          if(nova <= 100){
+            db.pokemons[idPokemon-1].nivel = nova
+            return nova
+          }else{
+            return db.pokemons[idPokemon-1].nivel = 100
+          }
+        }
+                   
+
+        treinarPokemon(idPokemon, niveisPokemon)
+
+        console.table(db.pokemons)
+        
 
         rl.close()
       });
