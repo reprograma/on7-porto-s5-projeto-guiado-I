@@ -1,3 +1,4 @@
+//Some o total dos valores de itens de uma lista de mercado. Bônus: arredonde o valor para até 2 casas decimais!
 const listaDeMercado = [
   {
     nome: 'Maçã',
@@ -25,3 +26,7 @@ const listaDeMercado = [
     valor: 6.99
   }
 ]
+const total = listaDeMercado.reduce(function(acumulador, itemAtual){
+  return acumulador + itemAtual.valor},0)
+
+console.log(total.toFixed(2) )

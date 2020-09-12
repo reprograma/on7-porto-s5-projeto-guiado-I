@@ -1,3 +1,4 @@
+//Filtre os itens já comprados de uma lista de mercado e retorne a lista atualizada
 const listaDeMercado = [
   {
     nome: 'Maçã',
@@ -20,3 +21,6 @@ const listaDeMercado = [
     comprado: false
   }
 ]
+const listaComprados = listaDeMercado.filter(item => item.comprado == true)
+
+console.log(listaComprados)
