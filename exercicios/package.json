@@ -1,0 +1,17 @@
+{
+  "name": "exercicios",
+  "version": "1.0.0",
+  "description": "Você irá executar todos os arquivos com os exercícios no console. Nos exercícios que contêm uma listagem, a ideia é mostrar no terminal um por um da lista.",
+  "main": "exercicio1.js",
+  "dependencies": {
+    "readline": "^1.3.0",
+    "sync": "^0.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
