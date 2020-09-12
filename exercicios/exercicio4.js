@@ -1,3 +1,5 @@
+// 4. Filtre os itens já comprados de uma lista de mercado e retorne a lista atualizada
+
 const listaDeMercado = [
   {
     nome: 'Maçã',
@@ -20,3 +22,18 @@ const listaDeMercado = [
     comprado: false
   }
 ]
+
+  const novaLista = listaDeMercado.filter((item) => { 
+    return !item.comprado
+  })
+
+  console.log(novaLista)
+
+  /*
+
+    { nome: 'Chamyto', comprado: false },
+  { nome: 'Nutella', comprado: false },
+  { nome: 'Suco', comprado: false }   
+
+  */ 
+ 
