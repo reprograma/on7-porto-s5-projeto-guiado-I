@@ -1,3 +1,6 @@
+// 6. Some o total dos valores de itens de uma lista de mercado.
+// Bônus: arredonde o valor para até 2 casas decimais!
+
 const listaDeMercado = [
   {
     nome: 'Maçã',
@@ -25,3 +28,9 @@ const listaDeMercado = [
     valor: 6.99
   }
 ]
+
+function compraTotal (arr) {
+  const total = arr.reduce((total, item) => total + item.valor, 0)
+    return total.toFixed(2)
+}
+console.log(compraTotal(listaDeMercado))
