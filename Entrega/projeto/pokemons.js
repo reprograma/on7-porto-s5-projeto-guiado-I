@@ -8,66 +8,61 @@ const rl = readline.createInterface({
 console.table(db.pokemons)
 
 let menu = () => {
-  rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n 2. Treinar \n 3. Sair da Pokedex \n', function(instrucao) {
-    if (instrucao == 'Registrar' || instrucao == 'registrar' || instrucao == 1) {
-      rl.question('\n Qual o nome do pokemon? \n', (nomePokemon) => {
-        rl.question('\n Qual o nível do pokemon? \n', function(nivelPokemon) {
-          rl.question('\n Qual o tipo do pokemon? \n', function(tipoPokemon) {
+  rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n 2. Treinar \n 3. Sair da Pokedex \n', instruction => {
+    if (instruction == 'Registrar' || instruction == 'registrar' || instruction == 1) {
+      rl.question('\n Qual o nome do pokemon? \n', namePokemon => {
+        rl.question('\n Qual o nível do pokemon? \n', levelPokemon => {
+          rl.question('\n Qual o tipo do pokemon? \n', typePokemon => {
   
-            function registrarPokemon(nome, nivel, tipo) {
+            const registrarPokemon = (name, level, type) => {
               const pokemon = {
                 id: db.pokemons.length + 1,
-                nome: nome,
-                nivel: parseInt(nivel),
-                tipo: tipo.split(', ')
+                name: name,
+                level: parseInt(level),
+                type: type.split(', ')
               }
               return db.pokemons.push(pokemon)
             }
   
-            registrarPokemon(nomePokemon, nivelPokemon, tipoPokemon)
-            console.log(`\n ${nomePokemon} foi registrado com sucesso :D \n`)
+            registrarPokemon(namePokemon, levelPokemon, typePokemon)
+            console.log(`\n ${namePokemon} foi registrado com sucesso :D \n`)
             console.table(db.pokemons)
             rl.close()
           })
         })
       }) 
-    } else if (instrucao == 'Treinar' || instrucao == 'treinar' || instrucao == 2) {
+    } else if (instruction == 'Treinar' || instruction == 'treinar' || instruction == 2) {
       let question = () => {
-        rl.question('Qual o ID do pokemon? \n', function(idPokemon) {
+        rl.question('Qual o ID do pokemon? \n', idPokemon => {
           if (!db.pokemons[idPokemon - 1]) {
             console.log('Pokemon não encontrado. Tente novamente.')
             question()
           }
-          rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon) {
-            function treinarPokemon(id, niveis) {
-              const novoNivel = db.pokemons[id - 1].nivel + parseInt(niveis)
-              if (novoNivel > 100) {
-                db.pokemons[id - 1].nivel = 100
+          rl.question('Quantos níveis quer adicionar? \n', levelsPokemon => {
+            const treinarPokemon = (id, levels) => {
+              const newLevel = db.pokemons[id - 1].level + parseInt(levels)
+              if (newLevel > 100) {
+                db.pokemons[id - 1].level = 100
               } else {
-                db.pokemons[id - 1].nivel = novoNivel
-              }          
-              
+                db.pokemons[id - 1].level = newLevel
+              }     
             }
-            treinarPokemon(idPokemon, niveisPokemon)
-            console.log(`\n ${db.pokemons[idPokemon - 1].nome} subiu de nível :D \n`)
-            const ordenadoPorMaiorNivel = db.pokemons.sort( (a, b) => b.nivel - a.nivel)
-            console.table(ordenadoPorMaiorNivel)
-
+            treinarPokemon(idPokemon, levelsPokemon)
+            console.log(`\n ${db.pokemons[idPokemon - 1].name} subiu de nível :D \n`)
+            const highestLevel = db.pokemons.sort( (a, b) => b.level - a.level)
+            console.table(highestLevel)
             rl.close()        
         })
       }) 
     }
     question()
-    } else if (instrucao == 'Sair' || instrucao == 'sair' || instrucao == 3) {
+    } else if (instruction == 'Sair' || instruction == 'sair' || instruction == 3) {
       console.log('Até mais!')
-      rl.close()
-
-    
+      rl.close()    
     } else {
       console.log('\n Instrução inválida. Escolha Registrar ou Treinar. \n')
       menu()
     } 
   })
-
 }
 menu()
