@@ -41,10 +41,21 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
         // Chame AQUI a função que irá receber os valores e treinar o pokemon.
         
     
-        
-        rl.close()
-      });
-    });
-  }
-  console.log(instrucao)
-});
+        function treinandoPokemon(id, niveis) {
+          const treinoPokemon = {
+             id: db.pokemons.length+1 
+                      
+               }
+                             
+                 const newId = (db.pokemons)
+                    newId.push (treinoPokemon)
+                   console.table(newId)  
+  
+               treinandoPokemon(id, niveis)
+  
+          rl.close()
+      };
+  });
+  });
+          console.log(instrucao)
+  }})
