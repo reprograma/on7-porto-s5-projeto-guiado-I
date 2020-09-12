@@ -1,0 +1,24 @@
+{
+  "name": "on7-porto-s5-projeto-guiado-I",
+  "version": "1.0.0",
+  "description": "## Revisão JS e ES6 Por: @cintiafumi",
+  "main": "joguinho.js",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lealclarissa/on7-porto-s5-projeto-guiado-I.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lealclarissa/on7-porto-s5-projeto-guiado-I/issues"
+  },
+  "homepage": "https://github.com/lealclarissa/on7-porto-s5-projeto-guiado-I#readme"
+}
