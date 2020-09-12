@@ -1,5 +1,5 @@
 const confeito = ['>(O)<'];
-const abrindoConfeito = ['|>(O)<|','| (0)<|', '| (O) |', ' O ', ' '];
+const abrindoConfeito = ['|>(O)<|','| (0)<|', '| (O) |', '(O)', ' O', ' o', ' .'];
 const pessoa = {
 	nome: 'Carlos',
 	comer(confeito) {
