@@ -6,7 +6,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-console.table(db.pokemons)
+console.table(db.pokemons.sort(db.pokemons.nivel).reverse(db.pokemons.nivel))
 
 
 function registrarPokemon(nome, nivel, tipo) {
