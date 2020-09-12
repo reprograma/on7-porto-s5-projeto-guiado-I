@@ -5,7 +5,7 @@ const { pokemons } = require('../projeto/database')
 console.log('== versão com readline-sync ==')
 console.table(db.pokemons)
 
-while (true){
+
 const instrucao = input.question('O que voce gostaria de fazer com seus pokemons? \n 1. Registrar \n 2. Treinar \n')
 if (instrucao == 'registrar' || instrucao == 'Registrar' || instrucao == '1') {
     const nomePokemon = input.question('Qual o nome do pokemon? \n')
@@ -39,39 +39,31 @@ else if (instrucao == 'treinar' || instrucao == 'Treinar' || instrucao == '2') {
     
     function trainPokemon(element, level){
            if (idPokemon == element.id){
-           addLevel = element.nivel + parseInt(niveisPokemon)
-           element.nivel = addLevel
-        } if (addLevel > 100){
-           return element.nivel;
-        } else {
-            addLevel = element.nivel + parseInt(niveisPokemon)
-        } 
-        
-        
+               if (element.nivel + parseInt(niveisPokemon) > 100){
+                console.log("O total não pode ultrapassar 100");
+               } if(addLevel = element.nivel + parseInt(niveisPokemon)){
+                element.nivel = addLevel
+                }
+                  else {
+                    addLevel = element.nivel + parseInt(niveisPokemon)
+                  } 
+            
 
-      
-    }   
+            }
+           
+           
+        } 
+                 
+                   
+     
 
     // Chame AQUI a função que irá receber os valores e treinar o pokemon.
     pokemons.forEach(trainPokemon)
     trainPokemon(idPokemon, niveisPokemon)
     console.table(db.pokemons)
 }
-}
 
 
 
 
-// if ((db.pokemons[a].nivel + Number(level)) > 100) {
-//     db.pokemons[a].nivel = 100;
-//   } else {
-//     db.pokemons[a].nivel = db.pokemons[a].nivel + Number(level);
-//   }
-//   console.table(db.pokemons);
-//   boolean = false;
-// }
-// }
-// if (boolean) {
-// console.log('Pokemon não encontrado!');
-// }
-// }
+
