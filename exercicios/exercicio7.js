@@ -8,21 +8,22 @@ function somaValoresImpares(){
 
      for (i = 0 ; i < valores.length; i++){
         soma += valores[i]
-        
-     } if (valores[i] % 2 === 0){
+       
+     } if (valores % 2 == 0){
          soma2 += valores[i]
-        return `A soma dos valores pares é: ${soma2}  TESTE-2`
+         
+        return `A soma dos valores pares é: ${soma2}  TESTE-2` 
 
-        } else if (valores[i] % 2 != 0) {
+        } else if (valores % 2 == 1) {
             soma3 += valores[i]
-            return (`A soma dos valores ímpares é:   ${soma3} TESTE-3`)
+            return `A soma dos valores ímpares é:   ${soma3} TESTE-3 ` 
        }
 
 }
 
  
    console.log(somaValoresImpares(valores))
-
+  
    console.log(soma,  "TESTE-1 - RETORNA SOMA DE TODOS OS ELEMEMTOS ARRAY")
    console.log(soma2, "TESTE-2")
    console.log(soma3, "TESTE-3")
@@ -36,16 +37,18 @@ let soma4 = 0
       soma4 += valor[i]
     
  }
- console.log(soma4, "TESTE-4")
+ console.log(soma4, "TESTE-4 - não tem relação com a questão")
 
  
  /* Exibe após execução do código 
  
-271 TESTE-1 - RETORNA SOMA DE TODOS OS ELEMEMTOS ARRAY
-0 TESTE-2
-NaN TESTE-3
-_________________________________
----------------------------------
-20 TESTE-4
+   undefined
+   271 TESTE-1 - RETORNA SOMA DE TODOS OS ELEMEMTOS ARRAY
+   0 TESTE-2
+   0 TESTE-3
+   _________________________________
+   ---------------------------------
+   20 TESTE-4 - não tem relação coma questão
+
 
  */

@@ -38,7 +38,7 @@ let soma = 0
 function somarValoresItensListaDeMercado (){
   
   for (i = 0; i < listaDeMercado.length; i++){
-    soma += listaDeMercado[i].valor
+    soma += listaDeMercado[i]. valor
     return soma //  Retorna apenas o conteúdo da chave valor do índice 0 do array de objetos da const listaDeMercado.
                 
 }
