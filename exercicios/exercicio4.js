@@ -23,8 +23,8 @@ const listaDeMercado = [
   }
 ]
 
-  var novaLista = listaDeMercado.filter((item) => { 
-    return item.comprado === false
+  const novaLista = listaDeMercado.filter((item) => { 
+    return !item.comprado
   })
 
   console.log(novaLista)
