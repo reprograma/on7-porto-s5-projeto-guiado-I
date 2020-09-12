@@ -1,7 +1,12 @@
-const bala = ['[<O>]'];
+const confeito = ['>(O)<'];
+let confeitoSemPapel = confeito[0].split("")
+
 const pessoa = {
-  nome: 'Anna',
-  comer(bala) {
-    console.log(`${this.nome} comeu a bala: ${bala}`);
+  nome: 'Carlos',
+  comer(confeitoSemPapel) {
+    console.log(`${this.nome} comeu o confeito: ${confeitoSemPapel[2]}`);
   }
 }
+
+console.log(pessoa.comer(confeitoSemPapel))
+
