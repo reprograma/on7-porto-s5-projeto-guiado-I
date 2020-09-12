@@ -5,3 +5,4 @@ const pessoa = {
     console.log(`${this.nome} comeu a bala: ${bala}`);
   }
 }
+pessoa.comer(bala);
