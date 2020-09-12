@@ -44,16 +44,11 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
         // Você pode remover esse console.log acima se quiser.
         // Chame AQUI a função que irá receber os valores e treinar o pokemon.
         function treinarPokemon(idpok, nivelpoke){
-           const treinamento = {
-            id: db.pokemons.filter((item) => {return item.id == parseInt(idpok)}),
-            nivel: db.pokemons.filter((item) =>  {
-            const total = item.nivel + parseInt(nivelpoke)
-            return total
-          })
-        }
-        return treinamento
+           const treinamento = db.pokemons[idpok - 1]
+           const totalNivel = treinamento.nivel + parseInt(nivelpoke)
       }
-        treinarPokemon(idPokemon, niveisPokemon)
+       return totalNivel
+        treinarPokemon(idPokemon, niveisPokemon)        
         console.table(db.pokemons)
         
 
