@@ -44,7 +44,7 @@ function pokemonRegister() {
   pokemon.nivel = Number(readline.question('Qual o nível do pokemon? \n'));
   pokemon.tipo = pokemonTypes();
   db.pokemons.push(pokemon);
-  console.table(db.pokemons);
+  pokemonWiew();
 }
 /**
  * Método para retornar os tipos dos pokemons.
@@ -87,10 +87,10 @@ function pokemonLevel() {
  */
 function pokemonWiew() {
   db.pokemons.sort(function ordenar(a, b) {
-    if (a.nivel > b.nivel) {
+    if (a.nivel < b.nivel) {
       return 1;
     }
-    if (b.nivel > a.nivel) {
+    if (b.nivel < a.nivel) {
       return -1;
     }
     if (b.nivel === a.nivel) {
