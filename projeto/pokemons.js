@@ -73,5 +73,45 @@ function menu() {
 };
 menu();
 
+/* Saída: 
+┌─────────┬────┬──────────────┬───────┬────────────────────────┐
+│ (index) │ id │     nome     │ nivel │          tipo          │
+├─────────┼────┼──────────────┼───────┼────────────────────────┤
+│    0    │ 1  │  'Pikachu'   │  10   │     [ 'elétrico' ]     │
+│    1    │ 2  │ 'Bulbasaur'  │  20   │      [ 'grama' ]       │
+│    2    │ 3  │ 'Charmeleon' │  30   │       [ 'fogo' ]       │
+│    3    │ 4  │   'Arbok'    │  40   │      [ 'veneno' ]      │
+│    4    │ 5  │  'Mr. Mime'  │  50   │ [ 'psiquico', 'fada' ] │
+│    5    │ 6  │  'Alakazam'  │  60   │     [ 'psiquico' ]     │
+│    6    │ 7  │  'Snorlax'   │  70   │      [ 'normal' ]      │
+│    7    │ 8  │   'Mewtwo'   │  80   │     [ 'psiquico' ]     │
+└─────────┴────┴──────────────┴───────┴────────────────────────┘
+Bem-vindo ao Pokedex! O que você gostaria de fazer com seus Pokemons?
+ 1. Registrar
+ 2. Treinar
+ 3. Sair
+2
+Qual o ID do Pokemon?
+9
+Pokemon não encontrado na Pokedex. Tente novamente.
+Qual o ID do Pokemon?
+8
+Quantos níveis quer adicionar?
+15
 
+ Mewtwo subiu de nível na Pokedex.
+
+┌─────────┬────┬──────────────┬───────┬────────────────────────┐
+│ (index) │ id │     nome     │ nivel │          tipo          │
+├─────────┼────┼──────────────┼───────┼────────────────────────┤
+│    0    │ 8  │   'Mewtwo'   │  95   │     [ 'psiquico' ]     │
+│    1    │ 7  │  'Snorlax'   │  70   │      [ 'normal' ]      │
+│    2    │ 6  │  'Alakazam'  │  60   │     [ 'psiquico' ]     │
+│    3    │ 5  │  'Mr. Mime'  │  50   │ [ 'psiquico', 'fada' ] │
+│    4    │ 4  │   'Arbok'    │  40   │      [ 'veneno' ]      │
+│    5    │ 3  │ 'Charmeleon' │  30   │       [ 'fogo' ]       │
+│    6    │ 2  │ 'Bulbasaur'  │  20   │      [ 'grama' ]       │
+│    7    │ 1  │  'Pikachu'   │  10   │     [ 'elétrico' ]     │
+└─────────┴────┴──────────────┴───────┴────────────────────────┘
+*/
 
