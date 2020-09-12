@@ -5,7 +5,8 @@ const { pokemons } = require('../projeto/database')
 console.log('== versão com readline-sync ==')
 console.table(db.pokemons)
 
-const instrucao = input.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n 2. Treinar \n')
+while (true){
+const instrucao = input.question('O que voce gostaria de fazer com seus pokemons? \n 1. Registrar \n 2. Treinar \n')
 if (instrucao == 'registrar' || instrucao == 'Registrar' || instrucao == '1') {
     const nomePokemon = input.question('Qual o nome do pokemon? \n')
     const nivelPokemon = input.question('Qual o nível do pokemon? \n')
@@ -31,22 +32,23 @@ if (instrucao == 'registrar' || instrucao == 'Registrar' || instrucao == '1') {
 }
 else if (instrucao == 'treinar' || instrucao == 'Treinar' || instrucao == '2') {
     const idPokemon = input.question('Qual o ID do pokemon? \n')
-    const niveisPokemon = input.question('Quantos níveis quer adicionar? \n')
+    const niveisPokemon = input.question('Quantos niveis quer adicionar? \n')
     console.log('ID:', idPokemon, 'Níveis:', niveisPokemon)
     // Você pode remover esse console.log acima se quiser.
 
-
+    
     function trainPokemon(element, level){
-        if (idPokemon == element.id){
-            console.log = element.nivel + parseInt(niveisPokemon)
+           if (idPokemon == element.id){
+           addLevel = element.nivel + parseInt(niveisPokemon)
+           element.nivel = addLevel
         }
-        
+      
     }   
 
             // Chame AQUI a função que irá receber os valores e treinar o pokemon.
     pokemons.forEach(trainPokemon)
     trainPokemon(idPokemon, niveisPokemon)
     console.table(db.pokemons)
-
+}
 }
 
