@@ -41,14 +41,37 @@ else if (instrucao == 'treinar' || instrucao == 'Treinar' || instrucao == '2') {
            if (idPokemon == element.id){
            addLevel = element.nivel + parseInt(niveisPokemon)
            element.nivel = addLevel
-        }
+        } if (addLevel > 100){
+           return element.nivel;
+        } else {
+            addLevel = element.nivel + parseInt(niveisPokemon)
+        } 
+        
+        
+
       
     }   
 
-            // Chame AQUI a função que irá receber os valores e treinar o pokemon.
+    // Chame AQUI a função que irá receber os valores e treinar o pokemon.
     pokemons.forEach(trainPokemon)
     trainPokemon(idPokemon, niveisPokemon)
     console.table(db.pokemons)
 }
 }
 
+
+
+
+// if ((db.pokemons[a].nivel + Number(level)) > 100) {
+//     db.pokemons[a].nivel = 100;
+//   } else {
+//     db.pokemons[a].nivel = db.pokemons[a].nivel + Number(level);
+//   }
+//   console.table(db.pokemons);
+//   boolean = false;
+// }
+// }
+// if (boolean) {
+// console.log('Pokemon não encontrado!');
+// }
+// }
