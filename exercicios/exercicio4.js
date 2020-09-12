@@ -20,3 +20,9 @@ const listaDeMercado = [
     comprado: false
   }
 ]
+
+  var novaLista = listaDeMercado.filter((item) => {
+    return item.comprado === false
+  })
+
+  console.log(novaLista)

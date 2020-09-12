@@ -1,7 +1,7 @@
-const confeito = ['>(O)<'];
+const bala = ['[<O>]'];
 const pessoa = {
-  nome: 'Carlos',
-  comer(confeito) {
-    console.log(`${this.nome} comeu o confeito: ${praSuavariavel}`);
+  nome: 'Anna',
+  comer(bala) {
+    console.log(`${this.nome} comeu a bala: ${bala}`);
   }
 }

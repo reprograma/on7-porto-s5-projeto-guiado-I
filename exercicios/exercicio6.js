@@ -25,3 +25,7 @@ const listaDeMercado = [
     valor: 6.99
   }
 ]
+
+for(item of lista) {
+const valor = listaDeMercado.valor[i]
+}
