@@ -11,3 +11,7 @@ return resultado
 }
 console.log(somarNumerosImpares(valores));
 
+/* Saída: 
+67
+*/
+

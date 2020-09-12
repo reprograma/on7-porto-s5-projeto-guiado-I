@@ -28,3 +28,7 @@ function produtosComprados(){
 }
  
 console.log (produtosComprados(listaDeMercado));
+
+/* Saída:
+[ 'Chamyto', 'Nutella', 'Suco' ]
+*/

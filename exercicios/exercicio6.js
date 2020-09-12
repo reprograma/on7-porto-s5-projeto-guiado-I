@@ -27,3 +27,7 @@ const listaDeMercado = [
 ]
 
 console.log (listaDeMercado.map((listaDeMercado) => listaDeMercado.valor).reduce((soma, item) => soma + item).toFixed(2));
+
+/* Saída: 
+55.51
+*/

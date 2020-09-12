@@ -4,3 +4,7 @@ const somaNotas = notas.reduce((soma, item) => {
     return soma + item
 }, 0)
 console.log(somaNotas);
+
+/* Saída:
+22
+*/

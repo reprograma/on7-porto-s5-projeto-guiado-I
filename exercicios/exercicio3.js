@@ -6,3 +6,13 @@ function imprimirLista(listaDeMercado) {
     }
 }
 imprimirLista(listaDeMercado);
+
+/* Saída:
+maçã
+banana
+chamyto
+nutella
+coca-cola
+bisnaguinha
+rap10
+*/
