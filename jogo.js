@@ -1,11 +1,13 @@
 
 // [wip]
-function getRandom(max) {
-    return Math.floor(Math.random() * max + 1)
+
+
+function getRandom() {
+    return Math.floor(Math.random() * 10 + 1)
 }
 
-
-for (let i=0; i < 10; i++){
-
-    console.log(getRandon(max))
+for (let i = 0; i < 10; i++){
+  
+    
 }
+console.log(getRandon())

@@ -56,7 +56,7 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
             }
             
           }
-          db.pokemons.includes(treinarPokemon(idPokemon, niveisPokemon)) // encontrar um método do java - includes roda masnão soma
+          db.pokemons.includes(treinarPokemon(idPokemon, niveisPokemon)) // encontrar um método do java - includes roda mas não soma
           console.table(db.pokemons)
 
             
