@@ -29,8 +29,3 @@ const listaDeMercado = [
 ]
 
 
-const somaValores = listaDeMercado.map(listaDeMercado => listaDeMercado.valor)
-const reducer = (acc, cValue) => acc + cValue;
-const valorTotal = somaValores.reduce(reducer).toFixed(2)
-
-console.log(valorTotal)

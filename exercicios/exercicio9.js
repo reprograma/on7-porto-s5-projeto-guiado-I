@@ -5,3 +5,6 @@ const pessoa = {
     console.log(`${this.nome} comeu o confeito: ${praSuavariavel}`);
   }
 }
+
+
+//split
