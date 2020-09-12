@@ -35,15 +35,25 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
         });
       });
     });
-  } else {
+  } else if (instrucao == 'treinar') {
     rl.question('Qual o ID do pokemon? \n', function(idPokemon) {
       rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon) {
         console.log('ID:', idPokemon, 'Níveis:', niveisPokemon)
-       
         
+        const newLevel = () => {
+            if (db.pokemons[idPokemon-1].nivel + parseInt(niveisPokemon) <= 100) {
+              return db.pokemons[idPokemon-1].nivel + parseInt(niveisPokemon)
+            } else {
+              return 100
+            }
+          }
+          db.pokemons[(idPokemon)-1].nivel = newLevel()
+          console.table(db.pokemons)
         rl.close()
       });
     });
+  } else {
+    console.log('Ops, não entendi!')
   }
   console.log(instrucao)
-});
+})
