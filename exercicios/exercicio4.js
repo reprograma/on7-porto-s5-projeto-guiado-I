@@ -1,19 +1,23 @@
-//Filtre os itens já comprados de uma lista de mercado e retorne a lista atualizada
-
 const listaDeMercado = [
   {
-    nome: 'Maçã', comprado: true},
-  {
-    nome: 'Chamyto', comprado: false
+    nome: 'Maçã', 
+    comprado: true
   },
   {
-    nome: 'Nutella', comprado: false
+    nome: 'Chamyto', 
+    comprado: false
   },
   {
-    nome: 'Sorvete', comprado: true
+    nome: 'Nutella', 
+    comprado: false
   },
   {
-    nome: 'Suco', comprado: false
+    nome: 'Sorvete', 
+    comprado: true
+  },
+  {
+    nome: 'Suco', 
+    comprado: false
   }
 ]
 
@@ -23,4 +27,4 @@ function produtosComprados(){
    return listaAtualizada
 }
  
-console.log (produtosComprados(listaDeMercado))
+console.log (produtosComprados(listaDeMercado));
