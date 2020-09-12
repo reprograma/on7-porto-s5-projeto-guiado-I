@@ -6,15 +6,25 @@ Com o número secreto gerado, o jogo irá perguntar ao jogador: Que número esto
 
 Vamos lá?*/
 
-const numRandomico = (Math.random().toFixed(0))
-rl.question('Qual o número secreto?', function(newNumero) {
-if (newNumero > numRandomico){
-    console.log ('O número que você digitou é maior que o número secreto')
-} else if (newNumero < numRandomico) {
-    console.log ('O número que você digitou é menor que o número secreto');
-} else (newNumero === numRandomico) {
-    console.log ('Parabéns você acertou o número secreto!')
-}
-})
+const readline = require('readline');
+const rl = readline.createInterface({
+	input: process.stdin,
+	output: process.stdout,
+});
 
-newNumero()
+const numSecreto = Math.floor(Math.random() * 100);;
+console.log ('Estou pensando num número secreto. Tente advinhar!!!')
+const perguntarNumero = function () {
+	rl.question('Qual o número secreto? \n', function (resposta) { 
+        // Aqui você coloca a lógica para verificar se a resposta é correta ou não.
+        if (resposta > numSecreto) {
+    console.log ('O número que você digitou é maior que o número secreto')
+        } else if (resposta < numSecreto) {
+    console.log ('O número que você digitou é menor que o número secreto');
+        } else {
+    console.log ('Parabéns você acertou o número!')
+        }
+    }) // Se não estiver correta, pergunta de novo!
+    
+};
+perguntarNumero();
