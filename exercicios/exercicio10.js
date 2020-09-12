@@ -13,18 +13,17 @@ const rl = readline.createInterface({
 });
 
 const numSecreto = Math.floor(Math.random() * 100);;
-console.log ('Estou pensando num número secreto. Tente advinhar!!!')
+console.log ('Estou pensando num número secreto entre 0 e 100. Tente advinhar!') 
 const perguntarNumero = function () {
 	rl.question('Qual o número secreto? \n', function (resposta) { 
         // Aqui você coloca a lógica para verificar se a resposta é correta ou não.
-        if (resposta > numSecreto) {
-    console.log ('O número que você digitou é maior que o número secreto')
-        } else if (resposta < numSecreto) {
-    console.log ('O número que você digitou é menor que o número secreto');
-        } else {
+        if (resposta === numSecreto) {
     console.log ('Parabéns você acertou o número!')
+        } else if (resposta < numSecreto) {
+    console.log ('Errado! Seu palpite está muito baixo.Tente outra vez: ');
+        } else {
+    console.log('O número que você digitou é maior que o número secreto. Tente outra vez:');
         }
-    }) // Se não estiver correta, pergunta de novo!
-    
-};
+    })
+}; 
 perguntarNumero();
