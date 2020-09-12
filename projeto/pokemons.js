@@ -15,7 +15,7 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
         rl.question('Qual o tipo do pokemon? \n', function(tipoPokemon) {
           console.log('Nome:', nomePokemon, 'Nível:', nivelPokemon, 'Tipo:', tipoPokemon)
           // Você pode remover esse console.log acima se quiser.
-          // Chame AQUI a função que irá receber os valores e registrar o pokemon.
+         
           function registroPoke(nomePokemon, nivelPokemon, tipoPokemon){
             const pokemon = {
               id: db.pokemons.length + 1,
@@ -34,12 +34,12 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
       });
     });
   } else {
-    // trainingQuestion ();
+    
     rl.question('Qual o ID do pokemon? \n', function(idPokemon) {
       const pokemonFiltered = db.pokemons.filter(pokemon => pokemon.id == idPokemon)
       if (pokemonFiltered.length === 0) {
         console.error(`Não foi encontrado pokemon para o id: ${idPokemon}`); 
-        // trainingQuestion();
+        
       } else 
       rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon) {
         const newNivel = pokemonFiltered[0].nivel + parseInt(niveisPokemon);
@@ -50,8 +50,7 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
         console.table(db.pokemons);
         console.table(pokemonFiltered)
         console.log('ID:', idPokemon, 'Níveis:', niveisPokemon)
-        // Você pode remover esse console.log acima se quiser.
-        // Chame AQUI a função que irá receber os valores e treinar o pokemon.
+        
         
         rl.close()
       });
