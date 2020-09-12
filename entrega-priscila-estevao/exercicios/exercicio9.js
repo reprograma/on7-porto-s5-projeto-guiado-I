@@ -8,6 +8,8 @@ const confeito = ['>(O)<'];
 const pessoa = {
   nome: 'Carlos',
   comer(confeito) {
-    console.log(`${this.nome} comeu o confeito: ${praSuavariavel}`);
+    confeito[0] = 'O'
+    console.log(`${this.nome} abriu o confeito, aqui está: ${confeito}`);
   }
 }
+pessoa.comer(confeito)

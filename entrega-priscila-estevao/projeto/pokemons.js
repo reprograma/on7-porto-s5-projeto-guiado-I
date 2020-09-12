@@ -35,6 +35,7 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
         console.log('ID:', idPokemon, 'Níveis:', niveisPokemon)
         // Você pode remover esse console.log acima se quiser.
         // Chame AQUI a função que irá receber os valores e treinar o pokemon.
+        console.table(db.pokemons)
         rl.close()
       });
     });
