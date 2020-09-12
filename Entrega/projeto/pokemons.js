@@ -10,9 +10,9 @@ console.table(db.pokemons)
 let menu = () => {
   rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n 2. Treinar \n', function(instrucao) {
     if (instrucao == 'Registrar' || instrucao == 'registrar' || instrucao == 1) {
-      rl.question('Qual o nome do pokemon? \n', (nomePokemon) => {
-        rl.question('Qual o nível do pokemon? \n', function(nivelPokemon) {
-          rl.question('Qual o tipo do pokemon? \n', function(tipoPokemon) {
+      rl.question('\n Qual o nome do pokemon? \n', (nomePokemon) => {
+        rl.question('\n Qual o nível do pokemon? \n', function(nivelPokemon) {
+          rl.question('\n Qual o tipo do pokemon? \n', function(tipoPokemon) {
   
             function registrarPokemon(nome, nivel, tipo) {
               const pokemon = {
@@ -25,6 +25,7 @@ let menu = () => {
             }
   
             registrarPokemon(nomePokemon, nivelPokemon, tipoPokemon)
+            console.log(`\n ${nomePokemon} foi registrado com sucesso :D \n`)
             console.table(db.pokemons)
             rl.close()
           })
@@ -45,9 +46,13 @@ let menu = () => {
               } else {
                 db.pokemons[id - 1].nivel = novoNivel
               }          
-              console.table(db.pokemons)
+              
             }
             treinarPokemon(idPokemon, niveisPokemon)
+            console.log(`\n ${db.pokemons[idPokemon - 1].nome} subiu de nível :D \n`)
+            const ordenadoPorMaiorNivel = db.pokemons.sort( (a, b) => b.nivel - a.nivel)
+            console.table(ordenadoPorMaiorNivel)
+
             rl.close()        
         })
       }) 
