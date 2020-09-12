@@ -1,3 +1,8 @@
-const listaDeMercado = [' maçã', ' banana', ' chamyto', ' nutella', ' coca-cola', ' bisnaguinha', ' rap10']
+const listaDeMercado = ['maçã', 'banana', 'chamyto', 'nutella', 'coca-cola', 'bisnaguinha', 'rap10']
 
-console.log(`Sua lista de compras desta semana é : ${listaDeMercado}`);
+function imprimirLista(listaDeMercado) {
+	for (let i = 0; i< listaDeMercado.length; i++){
+        console.log(listaDeMercado[i])
+    }
+}
+imprimirLista(listaDeMercado);
