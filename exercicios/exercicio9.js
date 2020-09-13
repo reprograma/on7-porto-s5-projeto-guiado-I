@@ -1,4 +1,5 @@
 const confeito = ['>(O)<'];
+
 const abrindoConfeito = ['|>(O)<|','| (0)<|', '| (O) |', ' (O)', ' O', ' o', ' .'];
 const pessoa = {
 	nome: 'Carlos',
@@ -13,3 +14,4 @@ console.log(`Que Delícia!!!!!`)
 Carlos comeu o confeito: |>(O)<|,| (0)<|,| (O) |, (O), O, o, .
 Que Delícia!!!!!
 */
+ 
