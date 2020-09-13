@@ -2,6 +2,6 @@
 
 const listaDeMercado = ['maçã', 'banana', 'chamyto', 'nutella', 'coca-cola', 'bisnaguinha', 'rap10']
 
-const constroiLista = () => {for (i = 0; i < listaDeMercado.length; i++){console.log(`item ${i+1}: ${listaDeMercado[i]}`)}}
+const constroiLista = (arr) => {for (i = 0; i < arr.length; i++){console.log(`item ${i+1}: ${arr[i]}`)}}
 
-constroiLista()
+constroiLista(listaDeMercado)
