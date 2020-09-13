@@ -1,22 +1,34 @@
 const listaDeMercado = [
   {
-    nome: 'Maçã',
+    nome: 'Maçã', 
     comprado: true
   },
   {
-    nome: 'Chamyto',
+    nome: 'Chamyto', 
     comprado: false
   },
   {
-    nome: 'Nutella',
+    nome: 'Nutella', 
     comprado: false
   },
   {
-    nome: 'Sorvete',
+    nome: 'Sorvete', 
     comprado: true
   },
   {
-    nome: 'Suco',
+    nome: 'Suco', 
     comprado: false
   }
 ]
+
+function produtosComprados(){
+   const produtosComprados = listaDeMercado.filter(item => item.comprado === false);
+   const listaAtualizada = produtosComprados.map(item => item.nome);
+   return listaAtualizada
+}
+ 
+console.log (produtosComprados(listaDeMercado));
+
+/* Saída:
+[ 'Chamyto', 'Nutella', 'Suco' ]
+*/
