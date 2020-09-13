@@ -33,24 +33,27 @@ const listaDeMercado = [
 // 6. Some o total dos valores de itens de uma lista de mercado. Bônus: arredonde o valor para até 2 casas decimais!
 // [wip] 
 
+
+
 let soma = 0
 
 function somarValoresItensListaDeMercado (){
-  
+
   
   for (i = 0; i < listaDeMercado.length; i++){
     soma += listaDeMercado[i].valor
-    return soma //  Retorna apenas o conteúdo da chave valor do índice 0 do array de objetos da const listaDeMercado.
+    return soma     //  Retorna apenas o conteúdo da chave valor do índice 0 do array de objetos da const listaDeMercado.
                 
 }
 
 }
-console.log(somarValoresItensListaDeMercado(listaDeMercado), "teste") // 4.64 
+
+console.log(somarValoresItensListaDeMercado(listaDeMercado)) // 4.64 
  
 
 console.log(listaDeMercado) 
 
-/*  Exibe após execução do código 
+/* Exibe após execução do código 
 
 4.64 teste
 [

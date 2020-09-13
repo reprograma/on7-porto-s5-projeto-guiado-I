@@ -64,5 +64,6 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
       });
     });
   }
+  
   console.log(instrucao)
 });

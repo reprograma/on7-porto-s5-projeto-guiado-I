@@ -32,6 +32,9 @@ console.log (somaValoresImpares)  // Exibe soma dos valores filtrados conforme c
    
 /* Exibe após execução do código 
 
+_________________________________
+67
+_________________________________
 [ 3, 9, 55 ]
 67
 
