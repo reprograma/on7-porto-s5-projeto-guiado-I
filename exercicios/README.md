@@ -10,4 +10,5 @@ Você irá executar todos os arquivos com os exercícios no console. Nos exercí
 6. Some o total dos valores de itens de uma lista de mercado. Bônus: arredonde o valor para até 2 casas decimais!
 7. Some somente os valores ímpares de uma lista
 8. Filtre uma lista de nomes e retorne somente os que começam com a letra 'A'
-9. Desafio surpresa (:
+9. Uma pessoa é representada pelo objeto `pessoa`. Essa pessoa tem a habilidade de comer. A string `>(O)<` representa uma bala. Faça com que essa pessoa consiga comer essa bala, mas pra isso, você vai precisar tirá-la da embalagem.
+O resultado esperado deve ser: `A NomeDaPessoa comeu a bala: O`
