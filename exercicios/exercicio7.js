@@ -11,4 +11,4 @@ function somaImpar (arr) {
 }
 			
 	
-	somaImpar ([1, 3, 1000, 51, 10, 200003])
+	somaImpar (valores)
