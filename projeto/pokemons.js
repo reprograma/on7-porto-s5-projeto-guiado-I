@@ -38,7 +38,7 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
       } else 
       rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon) {
        //console.log('ID:', idPokemon, 'Níveis:', niveisPokemon)
-       const treinandoPokemon = db.pokemons.
+       const treinandoPokemon = db.pokemons.1
 
 
         
