@@ -30,25 +30,30 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
         });
       });
     });
+
   } else if (instrucao === 'treinar' || instrucao === 'Treinar' || instrucao === 2) {
-    function filtraPokemon() {
+    function filtraPokemon(){
     rl.question('Qual o ID do pokemon? \n', idPokemon => {
       if (!db.pokemons[id.pokemon - 1]) {
-        console.log('Pokemon não encontrado. Tente novamente')
+        console.log('Pokemon Inexistente. Digite novamente')
         filtraPokemon()
       }
-      rl.question('Quantos níveis quer adicionar? \n', niveisPokemon => {
-        const treinoPokemon = (id, niveis) => {
-          const aumentarNivel = db.pokemons[id - 1] + parseInt(niveis)
+      rl.question('Quantos níveis quer adicionar? \n', nivelPokemon => {
+        function treinoPokemon (id, nivel) {
+          const aumentarNivel = db.pokemons[id - 1] + parseInt(nivel)
       if (aumentarNivel > 100) {
-        db.pokemons[id - 1].nivelPokemon
+        db.pokemons[id - 1].nivel = 100
+      } else {
+        db.pokemons[id - 1].nivel = aumentarNivel
       }
-        console.log('ID:', idPokemon, 'Níveis:', nivelsPokemon)
-        rl.close()
-      });
-    });
+    }
+   treinoPokemon(idPokemon, nivelPokemon) {
+    const maiorNivel = db.pokemons.sort((a, b) => b.nivel - a.nivel)
+    console.table(maiorNivel)
+    rl.close()
+      })
+    })
   }
-  console.log(instrucao)
-});
-}
-pokedex()
+  filtraPokemon()
+
+  // Não consegui visualizar o erro nesta segunda etapa :/ 
