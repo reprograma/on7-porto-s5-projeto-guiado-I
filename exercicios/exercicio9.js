@@ -12,5 +12,4 @@ console.log(`Que Delícia!!!!!`)
 /* Saída:
 Carlos comeu o confeito: |>(O)<|,| (0)<|,| (O) |, (O), O, o, .
 Que Delícia!!!!!
-
 */
