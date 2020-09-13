@@ -14,7 +14,23 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
         rl.question('Qual o tipo do pokemon? \n', function(tipoPokemon) {
           console.log('Nome:', nomePokemon, 'Nível:', nivelPokemon, 'Tipo:', tipoPokemon)
           // Você pode remover esse console.log acima se quiser.
+
+          function registerPokemon (idPoke, name, level, type) {
+            let registered = {
+              id: idPoke,
+              nome: name,
+              nivel: level,
+              tipo: type,
+
+            }
+            for (let i = 0; i < db.pokemons; i++) {
+              db.pokemons.push(registered)
+            }  
+            return registered         
+          }
+         
           // Chame AQUI a função que irá receber os valores e registrar o pokemon.
+          console.table(registerPokemon())
           rl.close()
         });
       });
@@ -24,6 +40,15 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
       rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon) {
         console.log('ID:', idPokemon, 'Níveis:', niveisPokemon)
         // Você pode remover esse console.log acima se quiser.
+
+
+
+
+
+
+
+
+
         // Chame AQUI a função que irá receber os valores e treinar o pokemon.
         rl.close()
       });
