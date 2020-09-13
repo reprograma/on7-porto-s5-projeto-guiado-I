@@ -38,19 +38,18 @@ rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n
       });
     });
   } else {
+    let treinar = () => {
     rl.question('Qual o ID do pokemon? \n', function(idPokemon) {
+   if (!db.pokemons[idPokemon - 1]){
+     console.log('Não foi possível encontrar esse Pokemon. Tente novamente')
+     treinar()
+   }
+   else {
       rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon) {
-        //console.log('ID:', idPokemon, 'Níveis:', niveisPokemon)
-        // Você pode remover esse console.log acima se quiser.
-        // Chame AQUI a função que irá receber os valores e treinar o pokemon.
-        function treinarPokemon(idpok, nivelpoke){
-           const treinamento = db.pokemons[idpok - 1]
-           const totalNivel = treinamento.nivel + parseInt(nivelpoke)
-      }
-       return totalNivel
-        treinarPokemon(idPokemon, niveisPokemon)        
-        console.table(db.pokemons)
+        return db.pokemons[idPokemon - 1].nivel + parseInt(niveisPokemon)
         
+                   }
+    
 
         rl.close()
       });
