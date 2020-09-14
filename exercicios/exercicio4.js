@@ -20,3 +20,15 @@ const listaDeMercado = [
     comprado: false
   }
 ]
+
+
+let newList = []
+
+for (let i = 0; i < listaDeMercado.length; i++) {
+  if (listaDeMercado[i].comprado == false) {
+    newList.push(listaDeMercado[i])
+  }
+} 
+
+console.log(newList)
+

@@ -1,0 +1,25 @@
+{
+  "name": "on7-porto-s5-projeto-guiado-I",
+  "version": "1.0.0",
+  "description": "Por: @cintiafumi",
+  "main": "jogo.js",
+  "dependencies": {
+    "readline": "^1.3.0",
+    "sync": "^0.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eline-create/on7-porto-s5-projeto-guiado-I.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eline-create/on7-porto-s5-projeto-guiado-I/issues"
+  },
+  "homepage": "https://github.com/eline-create/on7-porto-s5-projeto-guiado-I#readme"
+}
