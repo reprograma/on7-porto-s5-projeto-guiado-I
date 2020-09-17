@@ -1,27 +1,36 @@
 const listaDeMercado = [
   {
-    nome: 'Maçã',
+    nome: "Maçã",
     comprado: true,
-    valor: 4.64
+    valor: 4.64,
   },
   {
-    nome: 'Chamyto',
+    nome: "Chamyto",
     comprado: false,
-    valor: 6.99
+    valor: 6.99,
   },
   {
-    nome: 'Nutella',
+    nome: "Nutella",
     comprado: false,
-    valor: 23.90
+    valor: 23.9,
   },
   {
-    nome: 'Sorvete',
+    nome: "Sorvete",
     comprado: true,
-    valor: 12.99
+    valor: 12.99,
   },
   {
-    nome: 'Suco',
+    nome: "Suco",
     comprado: false,
-    valor: 6.99
-  }
-]
+    valor: 6.99,
+  },
+];
+
+const totalLista = 0;
+
+const somaLista = listaDeMercado.reduce(
+  (acc, valorLista) => acc + valorLista.valor,
+  totalLista
+);
+
+console.log(somaLista.toFixed(2));

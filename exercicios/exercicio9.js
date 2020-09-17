@@ -1,3 +1,4 @@
+
 const confeito = ['>(O)<'];
 const pessoa = {
   nome: 'Carlos',
@@ -5,3 +6,4 @@ const pessoa = {
     console.log(`${this.nome} comeu o confeito: ${praSuavariavel}`);
   }
 }
+
