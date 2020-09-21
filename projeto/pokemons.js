@@ -8,7 +8,12 @@ const rl = readline.createInterface({
 
 console.table(db.pokemons)
 
-rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n 2. Treinar \n', function(instruction) {
+
+rl.question('O que você gostaria de fazer com seus pokemons? \n 1. Registrar \n 2. Treinar \n (Digite "SAIR" se quiser encerrar a aplicação) \n', function(instruction) {
+  if (instruction == "SAIR"){
+    console.log("Seus pokemons sentirão saudades :(")
+    rl.close()
+  } else 
   if (instruction == 'Registrar') {
     rl.question('Qual o nome do pokemon? \n', function(namePokemon) {
       rl.question('Qual o nível do pokemon? \n', function(levelPokemon) {
@@ -53,6 +58,7 @@ db.pokemons[parseInt(idPokemon)-1] = treinaPoke (idPokemon, db.pokemons[idPokemo
 console.table(db.pokemons)
        
         rl.close()
+
       });
     });
   } else if (instruction != 'Treinar' && instruction != 'Registrar'){
@@ -61,3 +67,4 @@ console.table(db.pokemons)
     }
   // console.log(instruction)
 });
+
