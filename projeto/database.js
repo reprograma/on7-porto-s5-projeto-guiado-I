@@ -47,6 +47,6 @@ module.exports = {
       nome: 'Mewtwo',
       nivel: 80,
       tipo: ['psiquico'],
-    },
+    }
   ],
 }

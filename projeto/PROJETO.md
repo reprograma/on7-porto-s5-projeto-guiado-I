@@ -52,7 +52,7 @@ No console:
 $ Qual o ID do pokemon que deseja treinar?
 > 3
 
-$ Quntos níveis deseja adicionar?
+$ Quantos níveis deseja adicionar?
 > 13
 
 $ ----------------------------
