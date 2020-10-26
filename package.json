@@ -1,0 +1,19 @@
+{
+  "name": "js-practices-project-pokedex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marianavns/js-practices-project-pokedex.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marianavns/js-practices-project-pokedex/issues"
+  },
+  "homepage": "https://github.com/marianavns/js-practices-project-pokedex#readme"
+}
