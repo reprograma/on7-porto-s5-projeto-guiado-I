@@ -15,34 +15,3 @@ if (valorEntrada > respostaJs){
 }
  console.log(valorEntrada)
 //  console.log(respostaJs)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let arrayDeNumeros = [1, 2, 3, 4]
-
-// const valorFinal = arrayDeNumeros.reduce(function (quemVaiAcumulandoOResultadoFinal, valorNumericoDoElementoDoArray){
-// return quemVaiAcumulandoOResultadoFinal + valorNumericoDoElementoDoArray
-// }, 0) // esse zero é o valor inicial
-
-// console.log(valorFinal)
-
-// array.reduce(callback( acumulador, valorAtual[, index[, array]] )[, valorInicial]))
-// let pessoas = [{nome: "Mariana", comida: "salame", cor: "lilás",},{nome: "Nicki", comida: "arroz", cor: "rosa",}]
-  
-
-
-
