@@ -23,11 +23,8 @@ const listaDeMercado = [
 
 // 4. Filtre os itens já comprados de uma lista de mercado e retorne a lista atualizada
 
-// console.log(listaDeMercado)
-
-for (let i = 0; i<listaDeMercado.length; i++) {
-if (listaDeMercado[i].comprado == true) {
-  console.log(listaDeMercado[i].nome)
-}
-}
+let listaAtualizada = listaDeMercado
+  .filter(element => element.comprado == true)
+  .map(element => element.nome)
+    console.log(`Os itens já comprados são: ${listaAtualizada.join(', ')}.`)
 
