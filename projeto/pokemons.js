@@ -32,15 +32,36 @@ let menu = () => {
                 });
             });
         });
+      } else if (option == 2 || option == 'Treinar' || option == 'treinar') {
+        let question = () => {            
+            rl.question('Qual o ID do pokémon? \n', idPokemon => {
+                const pokemonInTraining = db.pokemons.find((pokemon) => pokemon.id == idPokemon);
+                if (!pokemonInTraining) {
+                    console.log('Pokémon não encontrado. Tente novamente');
+                    question();
+                };
+
+                rl.question('Quantos níveis quer adicionar? \n', levelsPokemon => {
+                    const trainPokemon = (id, levels) => {
+                        const newLevel = pokemonInTraining.level + parseInt(levels);
+                        newLevel > 100 ? pokemonInTraining.level = 100 : pokemonInTraining.level = newLevel;
+                    };
+                    trainPokemon(idPokemon, levelsPokemon);
+                    console.log(`\n Pokémon ${pokemonInTraining.name} subiu de nível \n`);
+                    const highestLevel = db.pokemons.sort((a, b) => b.level - a.level);
+                    console.table(highestLevel);
+                    rl.close();
+                });
+            });
+        };
+        question();
+      } else if (option == 3 || option == 'Sair' || option == 'sair') {
+          console.log('\n Até mais, treinador(a)!')
+          rl.close();
       } else {
-    rl.question('Qual o ID do pokemon? \n', function(idPokemon) {
-      rl.question('Quantos níveis quer adicionar? \n', function(niveisPokemon) {
-        console.log('ID:', idPokemon, 'Níveis:', niveisPokemon)
-        // Você pode remover esse console.log acima se quiser.
-        // Chame AQUI a função que irá receber os valores e treinar o pokemon.
-        rl.close()
-      });
-    });
-  }
-  console.log(instrucao)
-});
+          console.log('\n Instrução inválida. Escolha uma opção do menu.\n');
+          menu();
+      };
+  });
+};
+menu(); 
