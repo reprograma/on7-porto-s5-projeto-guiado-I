@@ -28,4 +28,12 @@ const listaDeMercado = [
   }
 ]
 
+const totalLista = 0;
+
+const somaLista = listaDeMercado.reduce(
+  (acc, valorLista) => acc + valorLista.valor,
+  totalLista
+);
+
+console.log(somaLista.toFixed(2));
 
