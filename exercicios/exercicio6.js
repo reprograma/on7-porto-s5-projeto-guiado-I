@@ -1,3 +1,5 @@
+// 6. Some o total dos valores de itens de uma lista de mercado. Bônus: arredonde o valor para até 2 casas decimais!
+
 const listaDeMercado = [
   {
     nome: 'Maçã',
@@ -25,3 +27,13 @@ const listaDeMercado = [
     valor: 6.99
   }
 ]
+
+const totalLista = 0;
+
+const somaLista = listaDeMercado.reduce(
+  (acc, valorLista) => acc + valorLista.valor,
+  totalLista
+);
+
+console.log(somaLista.toFixed(2));
+
