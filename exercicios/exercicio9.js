@@ -5,3 +5,4 @@ const pessoa = {
     console.log(`${this.nome} comeu o confeito: ${praSuavariavel}`);
   }
 }
+pessoa.comer(bala);
